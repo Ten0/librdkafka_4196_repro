@@ -1,3 +1,4 @@
-consumer
-producer
-perf.*
+/consumer
+/producer
+/perf.*
+/build
