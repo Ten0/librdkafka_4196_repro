@@ -1,5 +1,12 @@
 # How to reproduce
 
+## Clone this repository
+
+```bash
+git clone https://github.com/Ten0/librdkafka_4196_repro.git --recurse-submodules
+cd librdkafka_4196_repro
+```
+
 ## Get yourself a kafka up and running
 
 Personally I use bitnami's docker-compose, but I suspect you may already have a server somewhere...
@@ -53,4 +60,4 @@ BROKERS=<container ip> make perf-test
 ```
 
 Note that this perf test configures itself such that all 5 000 000 messages it will try to read are buffered before starting timer (this can be checked in the output stats, `fetchq_cnt` > 5 000 000).
-This benchmarks in conditions where we have enough message pre-loaded in the buffer.
+This benchmarks in conditions where we have enough messages pre-loaded in the buffer.
